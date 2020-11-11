@@ -644,7 +644,7 @@ void ClearDatadirCache()
     pathCached = fs::path();
     pathCachedNetSpecific = fs::path();
 }
-
+// (gArgs.GetArg("-conf", "lightbit.conf")
 fs::path GetConfigFile(const std::string& confPath)
 {
     fs::path pathConfigFile(confPath);
@@ -656,9 +656,33 @@ fs::path GetConfigFile(const std::string& confPath)
 
 void ArgsManager::ReadConfigFile(const std::string& confPath)
 {
-    fs::ifstream streamConfig(GetConfigFile(confPath));
-    if (!streamConfig.good())
-        return; // No bitcoin.conf file is OK
+    fs::ifstream streamConfig(GetConfigFile(gArgs.GetArg("-conf", "lightbit.conf")));
+    if (!streamConfig.good()) {
+        // Create empty lightbit.conf if no lightbit.conf
+        FILE* configFile = fopen(GetConfigFile(gArgs.GetArg("-conf", "lightbit.conf")).string().c_str(), "a");
+        if(configFile != NULL) 
+        {
+            std::string strHeader = 
+                "# LightBit Auto Configuration File!\n"
+                "# You can check explorer for more addnodes\n"
+                "addnode=99.16.215.42:1604\n"
+                "addnode=78.137.5.155:1604\n"
+                "addnode=45.63.58.234:1604\n"
+                "addnode=78.137.5.155:1604\n"
+                "addnode=217.182.76.35:59758\n"
+                "addnode=99.162.215.42:1604\n"
+                "addnode=57.177.134.207:61558\n"
+                "addnode=89.175.21.60:37430\n"
+                "addnode=217.100.85.170:44640\n"
+                "addnode=89.175.21.50:34956\n"
+                "addnode=198.13.36.250:1604\n"
+                "addnode=207.148.121.179:1604\n"
+                "addnode=99.16.215.42:1604\n";
+            fwrite(strHeader.c_str(), std::strlen(strHeader.c_str()), 1, configFile);
+            fclose(configFile);
+            streamConfig.open(GetConfigFile(gArgs.GetArg("-conf", "lightbit.conf")));
+        }
+    }
 
     {
         LOCK(cs_args);
