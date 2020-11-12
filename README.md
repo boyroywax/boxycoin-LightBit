@@ -1,11 +1,7 @@
 Lightbit Core
 =====================================
 
-Website https://lightbit.tech/
-ANN https://bitcointalk.org/index.php?topic=5174488.0
-Discord https://discord.gg/unGuGEB
-
-Explorer http://explorer.lightbit.xyz/ | http://blocks.lightbit.xyz/ | http://explorer.customspeed.nl/
+**[Website](https://lightbit.tech) | [Explorer 1](https://blocks.lightbit.tech) | [Explorer 2](http://explorer.customspeed.nl) | [Explorer 3](http://explorer.lightbit.tech)| [Official Ann](https://bitcointalk.org/index.php?topic=5174488.0) | [Discord](https://discord.gg/unGuGEB)**
 
 
 What is Lightbit?
@@ -18,15 +14,18 @@ out collectively by the network. Lightbit Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Lightbit Core software, see https://github.com/LightBitProject/LightBit/releases.
+the Lightbit Core software, **[see Release](https://github.com/LightBitProject/LightBit/releases)**.
 
-SPECS
+Specifications
 ------
 
-`Algo`YespowerLITB
-`Supply`21,000,000 (21 Million)
-`Premine`0
-`Block Reward `10 LITB
+| Specification          | Value                  |
+| ---------------------- |:-----------------------|
+| Algo                   | YespowerLITB           |
+| Premine                | 0                      |
+| Block Spacing          | 60 seconds             |
+| Max Supply             | 21,000,000 (21 Million)|
+| Block Reward           | 10 - 1  LITB           |
 
 License
 -------
