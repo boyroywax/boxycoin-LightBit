@@ -1,7 +1,7 @@
 Lightbit Core
 =====================================
 
-**[Website](https://lightbit.tech) | [Explorer 1](https://blocks.lightbit.tech) | [Explorer 2](http://explorer.customspeed.nl) | [Explorer 3](http://explorer.lightbit.tech)| [Official Ann](https://bitcointalk.org/index.php?topic=5174488.0) | [Discord](https://discord.gg/unGuGEB)**
+**[Website](https://lightbit.tech) | [Explorer 1](https://blocks.lightbit.tech) | [Explorer 2](http://explorer.customspeed.nl) | [Bitcointalk Ann](https://bitcointalk.org/index.php?topic=5174488.0) | [Discord](https://discord.gg/unGuGEB)**
 
 
 What is Lightbit?
