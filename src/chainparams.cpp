@@ -50,7 +50,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "LightBit.PoW";
-    const CScript genesisOutputScript = CScript() << ParseHex("04678afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("09108afdb0fe5548271967f1a67130b7105cd6a828e03909a67962e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d578a4c702b6bf11d5f") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -75,7 +75,7 @@ class CMainParams : public CChainParams {
 public:
     CMainParams() {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 1050000;
+        consensus.nSubsidyHalvingInterval = 1314000;
         consensus.BIP16Height = 0;
         consensus.BIP34Height = 17;
         consensus.BIP34Hash = uint256S("0x000012844c804516ed35b07f163eec8dbbdd83a7263e3c023821efbaf934c41f");
@@ -121,24 +121,24 @@ public:
         nDefaultPort = 1604;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1565437888, 5127, 0x1f1fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1612033497, 5127, 0x1f1fffff, 1, 85 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("001a37ca994627042609a8ff350c446b935bb912069c37ec543fbdb0a5ed77b3"));
-        assert(genesis.hashMerkleRoot == uint256S("0f731961f3a2d0ed7639e5f1f18e0f6e83a987bd29b75ce88df259974db08959"));
+        assert(consensus.hashGenesisBlock == uint256S("0x"));
+        assert(genesis.hashMerkleRoot == uint256S("0x"));
         
-        vSeeds.emplace_back("45.63.58.234:1604","45.63.58.234:1604");
-        vSeeds.emplace_back("99.16.215.42:1604","99.16.215.42:1604");
-        vSeeds.emplace_back("78.137.5.155:1604","78.137.5.155:1604");
-        vSeeds.emplace_back("45.63.58.234:1604","45.63.58.234:1604");
-        vSeeds.emplace_back("78.137.5.155:1604","78.137.5.155:1604");
-        vSeeds.emplace_back("217.182.76.35:59758","217.182.76.35:59758");
-        vSeeds.emplace_back("99.162.215.42:1604","99.162.215.42:1604");
-        vSeeds.emplace_back("57.177.134.207:61558","57.177.134.207:61558");
-        vSeeds.emplace_back("89.175.21.60:37430","89.175.21.60:37430");
-        vSeeds.emplace_back("217.100.85.170:44640","217.100.85.170:44640");
-        vSeeds.emplace_back("89.175.21.50:34956","89.175.21.50:34956");
-        vSeeds.emplace_back("198.13.36.250:1604","198.13.36.250:1604");
-        vSeeds.emplace_back("207.148.121.179:1604","207.148.121.179:1604");
+        vSeeds.emplace_back("144.126.212.247:4883","144.126.212.247:4883");
+        vSeeds.emplace_back("144.126.212.18:4883","144.126.212.18:4883");
+        // vSeeds.emplace_back("78.137.5.155:1604","78.137.5.155:1604");
+        // vSeeds.emplace_back("45.63.58.234:1604","45.63.58.234:1604");
+        // vSeeds.emplace_back("78.137.5.155:1604","78.137.5.155:1604");
+        // vSeeds.emplace_back("217.182.76.35:59758","217.182.76.35:59758");
+        // vSeeds.emplace_back("99.162.215.42:1604","99.162.215.42:1604");
+        // vSeeds.emplace_back("57.177.134.207:61558","57.177.134.207:61558");
+        // vSeeds.emplace_back("89.175.21.60:37430","89.175.21.60:37430");
+        // vSeeds.emplace_back("217.100.85.170:44640","217.100.85.170:44640");
+        // vSeeds.emplace_back("89.175.21.50:34956","89.175.21.50:34956");
+        // vSeeds.emplace_back("198.13.36.250:1604","198.13.36.250:1604");
+        // vSeeds.emplace_back("207.148.121.179:1604","207.148.121.179:1604");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48); // L
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // D

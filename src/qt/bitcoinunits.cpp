@@ -40,9 +40,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("LITB");
-    case mBTC: return QString("mLITB");
-    case uBTC: return QString::fromUtf8("µLITB");
+    case BTC: return QString("BOXY");
+    case mBTC: return QString("mBOXY");
+    case uBTC: return QString::fromUtf8("µBOXY");
     default: return QString("???");
     }
 }
@@ -60,9 +60,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Lightbits");
-    case mBTC: return QString("Milli-Lightbits (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Lightbits (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTC: return QString("BOXY");
+    case mBTC: return QString("Milli-BOXY (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-BOXY (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
