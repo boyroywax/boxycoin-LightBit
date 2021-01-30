@@ -1267,7 +1267,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>Lightbit Core</translation>
+        <translation>Boxycoin Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

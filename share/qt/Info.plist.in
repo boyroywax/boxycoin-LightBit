@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Lightbit-Qt</string>
+  <string>Boxycoin-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Lightbit-Qt</string>
+  <string>Boxycoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.lightbit.Lightbit-Qt</string>
+  <string>org.boxycoin.Boxycoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>

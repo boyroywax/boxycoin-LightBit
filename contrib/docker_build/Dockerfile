@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER info@lightbit.org
+MAINTAINER info@boxycoin.org
 
 ENV DEBIAN_FRONTEND noninteractive
 

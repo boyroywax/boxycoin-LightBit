@@ -11,7 +11,7 @@ fi
 BITCOINPATH=`realpath "${1/#\~/$HOME}"`
 
 if [ ! -f $BITCOINPATH/src/bitcoind.cpp ]; then
-  echo "First parameter doesn't seem like a lightbit path" >&2
+  echo "First parameter doesn't seem like a boxycoin path" >&2
   echo "" >&2
   echo "./build.sh bitcoin-dir number-of-processes" >&2
   echo "           for example: ./build.sh ../ 4" >&2
@@ -35,12 +35,12 @@ set -ex
 
 docker build -t bitcoind_build .
 
-docker run -v $BITCOINPATH:/lightbit bitcoind_build /run.sh $2
+docker run -v $BITCOINPATH:/boxycoin bitcoind_build /run.sh $2
 
 cd $BITCOINPATH/out
 
 # renaming from Bitcoin name to Bitcore name.... stupid thing
-rm -f $BITCOINPATH/out/lightbit-0.15.2-x86_64-linux-gnu-debug.tar.gz
+rm -f $BITCOINPATH/out/boxycoin-0.15.2-x86_64-linux-gnu-debug.tar.gz
 rename s/x86_64-linux-gnu/linux64/ $BITCOINPATH/out/*.tar.gz
 
 sha256sum *.tar.gz > SHA256SUMS

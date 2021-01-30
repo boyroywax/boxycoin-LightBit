@@ -46,9 +46,9 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Lightbit"
-#define QAPP_ORG_DOMAIN "lightbit.tech"
-#define QAPP_APP_NAME_DEFAULT "Lightbit-Qt"
-#define QAPP_APP_NAME_TESTNET "Lightbit-Qt-testnet"
+#define QAPP_ORG_NAME "Boxycoin"
+#define QAPP_ORG_DOMAIN "boxycoin.tech"
+#define QAPP_APP_NAME_DEFAULT "Boxycoin-Qt"
+#define QAPP_APP_NAME_TESTNET "Boxycoin-Qt-testnet"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

@@ -25,12 +25,12 @@ python27
 
 Download the source code:
 ```
-git clone https://github.com/lightbit/lightbit
+git clone https://github.com/boxycoin/boxycoin
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.
 
-### Building Lightbit Core
+### Building Boxycoin Core
 
 **Important**: Use `gmake` (the non-GNU `make` will exit with an error).
 

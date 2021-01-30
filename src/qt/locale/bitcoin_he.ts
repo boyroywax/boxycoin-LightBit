@@ -419,7 +419,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :lightbit)</translation>
+        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :boxycoin)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1295,7 +1295,7 @@
     </message>
     <message>
         <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>לא ניתן להפעיל את המקשר lightbit: click-to-pay</translation>
+        <translation>לא ניתן להפעיל את המקשר boxycoin: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1404,7 +1404,7 @@
         <translation>כמות</translation>
     </message>
     <message>
-        <source>Enter a Lightbit address (e.g. %1)</source>
+        <source>Enter a Boxycoin address (e.g. %1)</source>
         <translation>נא להזין כתובת ביטקוין (למשל: %1)</translation>
     </message>
     <message>

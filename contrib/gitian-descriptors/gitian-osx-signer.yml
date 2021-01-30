@@ -1,5 +1,5 @@
 ---
-name: "lightbit-dmg-signer"
+name: "boxycoin-dmg-signer"
 suites:
 - "bionic"
 architectures:
@@ -7,10 +7,10 @@ architectures:
 packages:
 - "faketime"
 remotes:
-- "url": "https://github.com/LightBitProject/lightbit-detached-sigs.git"
+- "url": "https://github.com/BOXYCoinProject/boxycoin-detached-sigs.git"
   "dir": "signature"
 files:
-- "lightbit-osx-unsigned.tar.gz"
+- "boxycoin-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
   WRAP_DIR=$HOME/wrapped
@@ -26,8 +26,8 @@ script: |
     echo "\$REAL \$@" >> $WRAP_DIR/${prog}
     chmod +x ${WRAP_DIR}/${prog}
   done
-  UNSIGNED=lightbit-osx-unsigned.tar.gz
-  SIGNED=lightbit-osx-signed.dmg
+  UNSIGNED=boxycoin-osx-unsigned.tar.gz
+  SIGNED=boxycoin-osx-signed.dmg
   tar -xf ${UNSIGNED}
   OSX_VOLNAME="$(cat osx_volname)"
   ./detached-sig-apply.sh ${UNSIGNED} signature/osx

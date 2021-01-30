@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Lightbit"
-            VALUE "FileDescription",    "lightbit-cli (JSON-RPC client for " PACKAGE_NAME ")"
+            VALUE "CompanyName",        "Boxycoin"
+            VALUE "FileDescription",    "boxycoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "lightbit-cli"
+            VALUE "InternalName",       "boxycoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "lightbit-cli.exe"
-            VALUE "ProductName",        "lightbit-cli"
+            VALUE "OriginalFilename",   "boxycoin-cli.exe"
+            VALUE "ProductName",        "boxycoin-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

@@ -359,7 +359,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit Core</translation>
+        <translation>Boxycoin Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -475,7 +475,7 @@
     </message>
     <message>
         <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>Произошла критическая ошибка. Lightbit больше не может продолжать безопасную работу и будет закрыт.</translation>
+        <translation>Произошла критическая ошибка. Boxycoin больше не может продолжать безопасную работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -650,7 +650,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit Core</translation>
+        <translation>Boxycoin Core</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -771,7 +771,7 @@
     </message>
     <message>
         <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети Lightbit через SOCKS5 прокси.</translation>
+        <translation>Подключится к сети Boxycoin через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -910,7 +910,7 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a Lightbit address (e.g. %1)</source>
+        <source>Enter a Boxycoin address (e.g. %1)</source>
         <translation>Введите биткоин-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -1645,7 +1645,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>Lightbit Core</translation>
+        <translation>Boxycoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -1721,7 +1721,7 @@
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>lightbit-core</translation>
+        <translation>boxycoin-core</translation>
     </message>
     <message>
         <source>(default: %u)</source>

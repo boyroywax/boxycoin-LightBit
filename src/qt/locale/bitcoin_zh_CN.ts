@@ -419,7 +419,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>请求支付 (生成二维码和 lightbit: URI)</translation>
+        <translation>请求支付 (生成二维码和 boxycoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -431,7 +431,7 @@
     </message>
     <message>
         <source>Open a bitcoin: URI or payment request</source>
-        <translation>打开一个 lightbit: URI 或支付请求</translation>
+        <translation>打开一个 boxycoin: URI 或支付请求</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1323,7 +1323,7 @@
     </message>
     <message>
         <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>无法启动 lightbit 协议的“一键支付”处理器</translation>
+        <translation>无法启动 boxycoin 协议的“一键支付”处理器</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1436,7 +1436,7 @@
         <translation>金额</translation>
     </message>
     <message>
-        <source>Enter a Lightbit address (e.g. %1)</source>
+        <source>Enter a Boxycoin address (e.g. %1)</source>
         <translation>请输入一个中央处理器链址 (例如 %1)</translation>
     </message>
     <message>
@@ -2357,7 +2357,7 @@
     </message>
     <message>
         <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>lightbit:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过中央处理器链网络传输。</translation>
+        <translation>boxycoin:URI 附带的备注信息，将会和交易一起存储，备查。 注意：该消息不会通过中央处理器链网络传输。</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -3164,7 +3164,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>Lightbit Core</translation>
+        <translation>Boxycoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

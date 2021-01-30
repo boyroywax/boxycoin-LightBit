@@ -9,7 +9,7 @@ update-locale LANG=en_US.UTF-8
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
 umask 002
-export OUTDIR=/lightbit/out
+export OUTDIR=/boxycoin/out
 rm -rf $OUTDIR
 mkdir $OUTDIR
 chmod a+rwx $OUTDIR
@@ -67,7 +67,7 @@ EOF
 chmod +x ${WRAP_DIR}/${prog}
 done
 
-cd lightbit
+cd boxycoin
 make clean || true
 rm -rf temp
 BASEPREFIX=`pwd`/depends
@@ -89,13 +89,13 @@ export PATH=${WRAP_DIR}:${PATH}
 CONFIG_SITE=${BASEPREFIX}/`echo "${HOSTS}" | awk '{print $1;}'`/share/config.site ./configure --prefix=/
 make clean
 make dist
-SOURCEDIST=`echo lightbit-*.tar.gz`
+SOURCEDIST=`echo boxycoin-*.tar.gz`
 DISTNAME=`echo ${SOURCEDIST} | sed 's/.tar.*//'`
 # Correct tar file order
 mkdir -p temp
 pushd temp
 tar xf ../$SOURCEDIST
-find lightbit-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
+find boxycoin-* | sort | tar --no-recursion --mode='u+rw,go+r-w,a+X' --owner=0 --group=0 -c -T - | gzip -9n > ../$SOURCEDIST
 popd
 
 ORIGPATH="$PATH"

@@ -99,7 +99,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit</translation>
+        <translation>Boxycoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -166,7 +166,7 @@
     <name>Intro</name>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit</translation>
+        <translation>Boxycoin</translation>
     </message>
     </context>
 <context>
@@ -194,8 +194,8 @@
         <translation>Marii </translation>
     </message>
     <message>
-        <source>Enter a Lightbit address (e.g. %1)</source>
-        <translation>Nyora kero ye Lightbit (sekuti %1)</translation>
+        <source>Enter a Boxycoin address (e.g. %1)</source>
+        <translation>Nyora kero ye Boxycoin (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>

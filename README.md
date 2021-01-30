@@ -1,20 +1,20 @@
-Lightbit Core
+Boxycoin Core
 =====================================
 
-**[Website](https://lightbit.tech) | [Explorer 1](https://blocks.lightbit.tech) | [Explorer 2](http://explorer.customspeed.nl) | [Bitcointalk Ann](https://bitcointalk.org/index.php?topic=5174488.0) | [Discord](https://discord.gg/unGuGEB)**
+**[Website](https://boxycoin.tech) | [Explorer 1](https://blocks.boxycoin.tech) | [Explorer 2](http://explorer.customspeed.nl) | [Bitcointalk Ann](https://bitcointalk.org/index.php?topic=5174488.0) | [Discord](https://discord.gg/unGuGEB)**
 
 
-What is Lightbit?
+What is Boxycoin?
 ------------------
 
-Lightbit is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Lightbit uses peer-to-peer technology to operate
+Boxycoin is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. Boxycoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Lightbit Core is the name of open source
+out collectively by the network. Boxycoin Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Lightbit Core software, **[see Release](https://github.com/LightBitProject/LightBit/releases)**.
+the Boxycoin Core software, **[see Release](https://github.com/BOXYCoinProject/BOXYCoin/releases)**.
 
 Specifications
 ------
@@ -30,5 +30,5 @@ Specifications
 License
 -------
 
-Lightbit Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Boxycoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.

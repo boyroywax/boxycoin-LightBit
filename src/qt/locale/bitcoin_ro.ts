@@ -63,11 +63,11 @@
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele tale Lightbit pentru trimiterea plății. Verifică mereu suma și adresa de primire înainte de trimiterea monedelor.</translation>
+        <translation>Acestea sunt adresele tale Boxycoin pentru trimiterea plății. Verifică mereu suma și adresa de primire înainte de trimiterea monedelor.</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele tale Lightbit pentru primirea plăților. Este recomandată folosirea de noi adrese de primire pentru fiecare tranzacție.</translation>
+        <translation>Acestea sunt adresele tale Boxycoin pentru primirea plăților. Este recomandată folosirea de noi adrese de primire pentru fiecare tranzacție.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -287,7 +287,7 @@
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Trimite monedele către o adresă Lightbit</translation>
+        <translation>Trimite monedele către o adresă Boxycoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -311,7 +311,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit</translation>
+        <translation>Boxycoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -339,11 +339,11 @@
     </message>
     <message>
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Lightbit pentru a face dovada că îți aparțin.</translation>
+        <translation>Semnează mesajele cu adresa ta de Boxycoin pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Lightbit specificată.</translation>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Boxycoin specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -359,7 +359,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și lightbit: URIs)</translation>
+        <translation>Cerere plată (generează coduri QR și boxycoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -371,7 +371,7 @@
     </message>
     <message>
         <source>Open a bitcoin: URI or payment request</source>
-        <translation>Deschide un lightbit: URI sau cerere de plată</translation>
+        <translation>Deschide un boxycoin: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -614,7 +614,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit</translation>
+        <translation>Boxycoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -645,7 +645,7 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
-        <translation>Posibil ca tranzacțiile recente să nu fie vizibile, încă, astfel bilanțul portofelului tău poate fi incorect. Aceste informații vor fi corecte o dată ce portofelul tău a încheiat sincronizarea cu rețeaua lightbit, conform descrierii de mai jos.</translation>
+        <translation>Posibil ca tranzacțiile recente să nu fie vizibile, încă, astfel bilanțul portofelului tău poate fi incorect. Aceste informații vor fi corecte o dată ce portofelul tău a încheiat sincronizarea cu rețeaua boxycoin, conform descrierii de mai jos.</translation>
     </message>
     <message>
         <source>Unknown...</source>
@@ -1273,7 +1273,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>Lightbit Core</translation>
+        <translation>Boxycoin Core</translation>
     </message>
     <message>
         <source>Upgrading UTXO database</source>

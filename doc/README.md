@@ -1,39 +1,39 @@
-Lightbit Core
+Boxycoin Core
 =============
 
 Setup
 ---------------------
-Lightbit Core is the original Lightbit client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Lightbit transactions (which is currently more than 100 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+Boxycoin Core is the original Boxycoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Boxycoin transactions (which is currently more than 100 GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Lightbit Core, visit [lightbit.org](https://lightbit.org/download-page.html#home).
+To download Boxycoin Core, visit [boxycoin.org](https://boxycoin.org/download-page.html#home).
 
 Running
 ---------------------
-The following are some helpful notes on how to run Lightbit on your native platform.
+The following are some helpful notes on how to run Boxycoin on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/lightbit-qt` (GUI) or
-- `bin/lightbitd` (headless)
+- `bin/boxycoin-qt` (GUI) or
+- `bin/boxycoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run lightbit-qt.exe.
+Unpack the files into a directory, and then run boxycoin-qt.exe.
 
 ### OS X
 
-Drag Lightbit-Core to your applications folder, and then run Lightbit-Core.
+Drag Boxycoin-Core to your applications folder, and then run Boxycoin-Core.
 
 ### Need Help?
 
-* See the documentation at the [Lightbit Homepage](https://lightbit.org)
+* See the documentation at the [Boxycoin Homepage](https://boxycoin.org)
 for help and more information.
 
 Building
 ---------------------
-The following are developer notes on how to build Lightbit on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Boxycoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [OS X Build Notes](build-osx.md)
@@ -44,12 +44,12 @@ The following are developer notes on how to build Lightbit on your native platfo
 
 Development
 ---------------------
-The Lightbit repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Boxycoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/lightbit/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/boxycoin/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Travis CI](travis-ci.md)

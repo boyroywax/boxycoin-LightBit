@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the Lightbit Core software.
+This document provides guidelines for internationalization of the Boxycoin Core software.
 
 How to translate?
 ------------------
@@ -87,8 +87,8 @@ This adds `<numerusform>`s to the respective `.ts` file, which can be translated
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
         <translation>
-            <numerusform>%n active connection to Lightbit network</numerusform>
-            <numerusform>%n active connections to Lightbit network</numerusform>
+            <numerusform>%n active connection to Boxycoin network</numerusform>
+            <numerusform>%n active connections to Boxycoin network</numerusform>
         </translation>
     </message>
 

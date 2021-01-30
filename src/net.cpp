@@ -1508,7 +1508,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "Lightbit " + FormatFullVersion();
+        std::string strDesc = "Boxycoin " + FormatFullVersion();
 
         try {
             while (true) {

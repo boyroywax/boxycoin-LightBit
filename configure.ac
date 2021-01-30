@@ -7,17 +7,17 @@ define(_CLIENT_VERSION_BUILD, 0)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2020)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Lightbit Core]])
-AC_INIT([Lightbit Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/LightBitProject/lightbit/issues],[lightbit],[http://lightbit.tech/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Boxycoin Core]])
+AC_INIT([Boxycoin Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/BOXYCoinProject/boxycoin/issues],[boxycoin],[http://boxycoin.tech/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=lightbitd
-BITCOIN_GUI_NAME=lightbit-qt
-BITCOIN_CLI_NAME=lightbit-cli
-BITCOIN_TX_NAME=lightbit-tx
+BITCOIN_DAEMON_NAME=boxycoind
+BITCOIN_GUI_NAME=boxycoin-qt
+BITCOIN_CLI_NAME=boxycoin-cli
+BITCOIN_TX_NAME=boxycoin-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])

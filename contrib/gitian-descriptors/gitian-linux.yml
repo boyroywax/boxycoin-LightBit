@@ -1,5 +1,5 @@
 ---
-name: "lightbit-linux-0.17"
+name: "boxycoin-linux-0.17"
 enable_cache: true
 suites:
 - "bionic"
@@ -32,8 +32,8 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/LightBitProject/lightbit.git"
-  "dir": "lightbit"
+- "url": "https://github.com/BOXYCoinProject/boxycoin.git"
+  "dir": "boxycoin"
 files: []
 script: |
   set -e -o pipefail

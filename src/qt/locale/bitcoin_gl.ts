@@ -131,7 +131,7 @@
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar moedas a unha dirección Lightbit</translation>
+        <translation>Enviar moedas a unha dirección Boxycoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -155,7 +155,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit</translation>
+        <translation>Boxycoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -183,11 +183,11 @@
     </message>
     <message>
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións Lightbit para probar que te pertencen</translation>
+        <translation>Asina mensaxes coas túas direccións Boxycoin para probar que te pertencen</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Lightbit dadas.</translation>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Boxycoin dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -207,7 +207,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e lightbit: URIs)</translation>
+        <translation>Solicitar pagos (xenera códigos QR e boxycoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -219,7 +219,7 @@
     </message>
     <message>
         <source>Open a bitcoin: URI or payment request</source>
-        <translation>Abrir un lightbit: URI ou solicitude de pago</translation>
+        <translation>Abrir un boxycoin: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -406,7 +406,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>Lightbit</translation>
+        <translation>Boxycoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -471,7 +471,7 @@
     </message>
     <message>
         <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente Lightbit no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <translation>Abrir automáticamente o porto do cliente Boxycoin no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -554,7 +554,7 @@
     </message>
     <message>
         <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Lightbit despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Boxycoin despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -920,7 +920,7 @@
     </message>
     <message>
         <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Asina a mensaxe para probar que posees esta dirección Lightbit</translation>
+        <translation>Asina a mensaxe para probar que posees esta dirección Boxycoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -940,7 +940,7 @@
     </message>
     <message>
         <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Lightbit especificada</translation>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Boxycoin especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1021,7 +1021,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>Core de Lightbit</translation>
+        <translation>Core de Boxycoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

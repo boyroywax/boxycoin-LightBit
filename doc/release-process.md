@@ -3,9 +3,9 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/lightbit/lightbit/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/boxycoin/boxycoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/lightbit/lightbit/blob/master/contrib/devtools/README.md#gen-manpagessh).
+* Update manpages, see [gen-manpages.sh](https://github.com/boxycoin/boxycoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
@@ -21,7 +21,7 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/lightbit/lightbit/pull/7415) for an example.
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/boxycoin/boxycoin/pull/7415) for an example.
 * Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 * Update `src/chainparams.cpp` chainTxData with statistics about the transaction count and rate.
 * Update version of `contrib/gitian-descriptors/*.yml`: usually one'd want to do this on master after branching off the release - but be sure to at least do it before a new major release
@@ -33,12 +33,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/lightbit/gitian.sigs.git
-    git clone https://github.com/lightbit/lightbit-detached-sigs.git
+    git clone https://github.com/boxycoin/gitian.sigs.git
+    git clone https://github.com/boxycoin/boxycoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/lightbit/lightbit.git
+    git clone https://github.com/boxycoin/boxycoin.git
 
-### Lightbit maintainers/release engineers, suggestion for writing release notes
+### Boxycoin maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -61,7 +61,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./lightbit
+    pushd ./boxycoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -95,7 +95,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../lightbit/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../boxycoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -103,50 +103,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url lightbit=/path/to/lightbit,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url boxycoin=/path/to/boxycoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign Lightbit Core for Linux, Windows, and OS X:
+### Build and sign Boxycoin Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --num-make 2 --memory 3000 --commit lightbit=v${VERSION} ../lightbit/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../lightbit/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/lightbit-*.tar.gz build/out/src/lightbit-*.tar.gz ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit boxycoin=v${VERSION} ../boxycoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../boxycoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/boxycoin-*.tar.gz build/out/src/boxycoin-*.tar.gz ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit lightbit=v${VERSION} ../lightbit/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../lightbit/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/lightbit-*-win-unsigned.tar.gz inputs/lightbit-win-unsigned.tar.gz
-    mv build/out/lightbit-*.zip build/out/lightbit-*.exe ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit boxycoin=v${VERSION} ../boxycoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../boxycoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/boxycoin-*-win-unsigned.tar.gz inputs/boxycoin-win-unsigned.tar.gz
+    mv build/out/boxycoin-*.zip build/out/boxycoin-*.exe ../
 
-    ./bin/gbuild --num-make 2 --memory 3000 --commit lightbit=v${VERSION} ../lightbit/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../lightbit/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/lightbit-*-osx-unsigned.tar.gz inputs/lightbit-osx-unsigned.tar.gz
-    mv build/out/lightbit-*.tar.gz build/out/lightbit-*.dmg ../
+    ./bin/gbuild --num-make 2 --memory 3000 --commit boxycoin=v${VERSION} ../boxycoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../boxycoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/boxycoin-*-osx-unsigned.tar.gz inputs/boxycoin-osx-unsigned.tar.gz
+    mv build/out/boxycoin-*.tar.gz build/out/boxycoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`lightbit-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`lightbit-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`lightbit-${VERSION}-win[32|64]-setup-unsigned.exe`, `lightbit-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`lightbit-${VERSION}-osx-unsigned.dmg`, `lightbit-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`boxycoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`boxycoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`boxycoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `boxycoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`boxycoin-${VERSION}-osx-unsigned.dmg`, `boxycoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import lightbit/contrib/gitian-keys/*.pgp
+    gpg --import boxycoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../lightbit/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../lightbit/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../lightbit/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../boxycoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../boxycoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../boxycoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -167,22 +167,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer lightbit-osx-unsigned.tar.gz to osx for signing
-    tar xf lightbit-osx-unsigned.tar.gz
+    transfer boxycoin-osx-unsigned.tar.gz to osx for signing
+    tar xf boxycoin-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf lightbit-win-unsigned.tar.gz
+    tar xf boxycoin-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/lightbit-detached-sigs
+    cd ~/boxycoin-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -195,25 +195,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [lightbit-detached-sigs](https://github.com/lightbit/lightbit-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [boxycoin-detached-sigs](https://github.com/boxycoin/boxycoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../lightbit/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../lightbit/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../lightbit/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/lightbit-osx-signed.dmg ../lightbit-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../boxycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../boxycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../boxycoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/boxycoin-osx-signed.dmg ../boxycoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../lightbit/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../lightbit/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../lightbit/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/lightbit-*win64-setup.exe ../lightbit-${VERSION}-win64-setup.exe
-    mv build/out/lightbit-*win32-setup.exe ../lightbit-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../boxycoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../boxycoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../boxycoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/boxycoin-*win64-setup.exe ../boxycoin-${VERSION}-win64-setup.exe
+    mv build/out/boxycoin-*win32-setup.exe ../boxycoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -235,23 +235,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-lightbit-${VERSION}-aarch64-linux-gnu.tar.gz
-lightbit-${VERSION}-arm-linux-gnueabihf.tar.gz
-lightbit-${VERSION}-i686-pc-linux-gnu.tar.gz
-lightbit-${VERSION}-x86_64-linux-gnu.tar.gz
-lightbit-${VERSION}-osx64.tar.gz
-lightbit-${VERSION}-osx.dmg
-lightbit-${VERSION}.tar.gz
-lightbit-${VERSION}-win32-setup.exe
-lightbit-${VERSION}-win32.zip
-lightbit-${VERSION}-win64-setup.exe
-lightbit-${VERSION}-win64.zip
+boxycoin-${VERSION}-aarch64-linux-gnu.tar.gz
+boxycoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+boxycoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+boxycoin-${VERSION}-x86_64-linux-gnu.tar.gz
+boxycoin-${VERSION}-osx64.tar.gz
+boxycoin-${VERSION}-osx.dmg
+boxycoin-${VERSION}.tar.gz
+boxycoin-${VERSION}-win32-setup.exe
+boxycoin-${VERSION}-win32.zip
+boxycoin-${VERSION}-win64-setup.exe
+boxycoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the lightbit.org server, nor put them in the torrent*.
+space *do not upload these to the boxycoin.org server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -261,29 +261,29 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the lightbit.org server
-  into `/var/www/bin/lightbit-core-${VERSION}`
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the boxycoin.org server
+  into `/var/www/bin/boxycoin-core-${VERSION}`
 
 - A `.torrent` will appear in the directory after a few minutes. Optionally help seed this torrent. To get the `magnet:` URI use:
 ```bash
 transmission-show -m <torrent file>
 ```
 Insert the magnet URI into the announcement sent to mailing lists. This permits
-people without access to `lightbit.org` to download the binary distribution.
+people without access to `boxycoin.org` to download the binary distribution.
 Also put it into the `optional_magnetlink:` slot in the YAML file for
-lightbit.org (see below for lightbit.org update instructions).
+boxycoin.org (see below for boxycoin.org update instructions).
 
-- Update lightbit.org version
+- Update boxycoin.org version
 
-  - First, check to see if the Lightbit.org maintainers have prepared a
-    release: https://github.com/lightbit/lightbit/releases
+  - First, check to see if the Boxycoin.org maintainers have prepared a
+    release: https://github.com/boxycoin/boxycoin/releases
 
       - If they have, it will have previously failed their Travis CI
         checks because the final release files weren't uploaded.
         Trigger a Travis CI rebuild---if it passes, merge.
 
-  - If they have not prepared a release, follow the Lightbit.org release
-    instructions: https://github.com/lightbit/lightbit/blob/master/doc/release-notes.md
+  - If they have not prepared a release, follow the Boxycoin.org release
+    instructions: https://github.com/boxycoin/boxycoin/blob/master/doc/release-notes.md
 
   - After the pull request is merged, the website will automatically show the newest version within 15 minutes, as well
     as update the OS download links. Ping @saivann/@harding (saivann/harding on Freenode) in case anything goes wrong
@@ -294,6 +294,6 @@ lightbit.org (see below for lightbit.org update instructions).
 
   - twitter @cpcuhain
 
-  - lightbit.org
+  - boxycoin.org
 
   - Celebrate

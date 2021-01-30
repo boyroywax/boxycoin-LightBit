@@ -1,25 +1,25 @@
-Lightbit Core version 0.16.3 is now available from:
+Boxycoin Core version 0.16.3 is now available from:
 
-  <https://github.com/lightbit/lightbit/releases/latest>
+  <https://github.com/boxycoin/boxycoin/releases/latest>
 
 This is a new minor version release, with various bugfixes
 as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/lightbit/lightbit/issues>
+  <https://github.com/boxycoin/boxycoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://twitter.com/lightbit>
+  <https://twitter.com/boxycoin>
 
 How to Upgrade
 ==============
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes for older versions), then run the
-installer (on Windows) or just copy over `/Applications/Lightbit-Qt` (on Mac)
-or `lightbitd`/`lightbit-qt` (on Linux).
+installer (on Windows) or just copy over `/Applications/Boxycoin-Qt` (on Mac)
+or `boxycoind`/`boxycoin-qt` (on Linux).
 
 The first time you run version 0.15.0 or newer, your chainstate database will be converted to a
 new format, which will take anywhere from a few minutes to half an hour,
@@ -40,10 +40,10 @@ wallets that were created with older versions are not affected by this.
 Compatibility
 ==============
 
-Lightbit Core is extensively tested on multiple operating systems using
+Boxycoin Core is extensively tested on multiple operating systems using
 the Linux kernel, macOS 10.8+, and Windows Vista and later. Windows XP is not supported.
 
-Lightbit Core should also work on most other Unix-like systems but is not
+Boxycoin Core should also work on most other Unix-like systems but is not
 frequently tested on them.
 
 Notable changes
@@ -53,7 +53,7 @@ Denial-of-Service vulnerability
 -------------------------------
 
 A denial-of-service vulnerability exploitable by miners has been discovered in
-Lightbit Core versions 0.14.0 up to 0.16.2. It is recommended to upgrade any of
+Boxycoin Core versions 0.14.0 up to 0.16.2. It is recommended to upgrade any of
 the vulnerable versions to 0.16.3 as soon as possible.
 
 0.16.3 change log

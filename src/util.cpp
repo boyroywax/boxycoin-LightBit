@@ -82,8 +82,8 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "lightbit.conf";
-const char * const BITCOIN_PID_FILENAME = "lightbitd.pid";
+const char * const BITCOIN_CONF_FILENAME = "boxycoin.conf";
+const char * const BITCOIN_PID_FILENAME = "boxycoind.pid";
 const char * const DEFAULT_DEBUGLOGFILE = "debug.log";
 
 ArgsManager gArgs;
@@ -558,7 +558,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "lightbit";
+    const char* pszModule = "boxycoin";
 #endif
     if (pex)
         return strprintf(
@@ -583,7 +583,7 @@ fs::path GetDefaultDataDir()
     // Unix: ~/.bitcoin
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Lightbit";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Boxycoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -593,10 +593,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Lightbit";
+    return pathRet / "Library/Application Support/Boxycoin";
 #else
     // Unix
-    return pathRet / ".lightbit";
+    return pathRet / ".boxycoin";
 #endif
 #endif
 }
@@ -644,7 +644,7 @@ void ClearDatadirCache()
     pathCached = fs::path();
     pathCachedNetSpecific = fs::path();
 }
-// (gArgs.GetArg("-conf", "lightbit.conf")
+// (gArgs.GetArg("-conf", "boxycoin.conf")
 fs::path GetConfigFile(const std::string& confPath)
 {
     fs::path pathConfigFile(confPath);
@@ -656,14 +656,14 @@ fs::path GetConfigFile(const std::string& confPath)
 
 void ArgsManager::ReadConfigFile(const std::string& confPath)
 {
-    fs::ifstream streamConfig(GetConfigFile(gArgs.GetArg("-conf", "lightbit.conf")));
+    fs::ifstream streamConfig(GetConfigFile(gArgs.GetArg("-conf", "boxycoin.conf")));
     if (!streamConfig.good()) {
-        // Create empty lightbit.conf if no lightbit.conf
-        FILE* configFile = fopen(GetConfigFile(gArgs.GetArg("-conf", "lightbit.conf")).string().c_str(), "a");
+        // Create empty boxycoin.conf if no boxycoin.conf
+        FILE* configFile = fopen(GetConfigFile(gArgs.GetArg("-conf", "boxycoin.conf")).string().c_str(), "a");
         if(configFile != NULL) 
         {
             std::string strHeader = 
-                "# LightBit Auto Configuration File!\n"
+                "# BOXYCoin Auto Configuration File!\n"
                 "# You can check explorer for more addnodes\n"
                 "addnode=99.16.215.42:1604\n"
                 "addnode=78.137.5.155:1604\n"
@@ -680,7 +680,7 @@ void ArgsManager::ReadConfigFile(const std::string& confPath)
                 "addnode=99.16.215.42:1604\n";
             fwrite(strHeader.c_str(), std::strlen(strHeader.c_str()), 1, configFile);
             fclose(configFile);
-            streamConfig.open(GetConfigFile(gArgs.GetArg("-conf", "lightbit.conf")));
+            streamConfig.open(GetConfigFile(gArgs.GetArg("-conf", "boxycoin.conf")));
         }
     }
 

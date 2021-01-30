@@ -1,4 +1,4 @@
-Building lightbit for bitcore-cpu
+Building boxycoin for bitcore-cpu
 -----
 
 Run the script like this
