@@ -76,32 +76,32 @@ public:
     CMainParams() {
         strNetworkID = "main";
         consensus.nSubsidyHalvingInterval = 1314000;
-        consensus.BIP16Height = 0;
-        consensus.BIP34Height = 17;
-        consensus.BIP34Hash = uint256S("0x000012844c804516ed35b07f163eec8dbbdd83a7263e3c023821efbaf934c41f");
-        consensus.BIP65Height = 0;
-        consensus.BIP66Height = 0;
-        consensus.powLimit = uint256S("0x001fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        // consensus.BIP16Height = 0;
+        // consensus.BIP34Height = 17;
+        // consensus.BIP34Hash = uint256S("0x000012844c804516ed35b07f163eec8dbbdd83a7263e3c023821efbaf934c41f");
+        // consensus.BIP65Height = 0;
+        // consensus.BIP66Height = 0;
+        // consensus.powLimit = uint256S("0x001fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 60 * 60;
-        consensus.nPowTargetSpacing = 60;
+        consensus.nPowTargetSpacing = 120;
         consensus.nZawyLwmaAveragingWindow = 90;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 57; // 95% of 60
         consensus.nMinerConfirmationWindow = 60; // nPowTargetTimespan / nPowTargetSpacing
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+        // consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+        // consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
-        // Deployment of BIP68, BIP112, and BIP113.
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        // // Deployment of BIP68, BIP112, and BIP113.
+        // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
-        // Deployment of SegWit (BIP141, BIP143, and BIP147)
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        // // Deployment of SegWit (BIP141, BIP143, and BIP147)
+        // consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
@@ -114,17 +114,17 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xad;
+        pchMessageStart[0] = 0xf6;
         pchMessageStart[1] = 0xae;
         pchMessageStart[2] = 0xdc;
         pchMessageStart[3] = 0xfe;
-        nDefaultPort = 1604;
+        nDefaultPort = 4883;
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1612033497, 5127, 0x1f1fffff, 1, 85 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x"));
-        assert(genesis.hashMerkleRoot == uint256S("0x"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00"));
+        assert(genesis.hashMerkleRoot == uint256S("0x00"));
         
         vSeeds.emplace_back("144.126.212.247:4883","144.126.212.247:4883");
         vSeeds.emplace_back("144.126.212.18:4883","144.126.212.18:4883");
@@ -140,7 +140,7 @@ public:
         // vSeeds.emplace_back("198.13.36.250:1604","198.13.36.250:1604");
         // vSeeds.emplace_back("207.148.121.179:1604","207.148.121.179:1604");
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,48); // L
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,8); // 4
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,30); // D
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
@@ -169,33 +169,33 @@ class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 1050000;
-        consensus.BIP16Height = 0;
-        consensus.BIP34Height = 17;
-        consensus.BIP34Hash = uint256();
-        consensus.BIP65Height = 0;
-        consensus.BIP66Height = 0;
-        consensus.powLimit = uint256S("0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+        consensus.nSubsidyHalvingInterval = 1314000;
+        // consensus.BIP16Height = 0;
+        // consensus.BIP34Height = 17;
+        // consensus.BIP34Hash = uint256();
+        // consensus.BIP65Height = 0;
+        // consensus.BIP66Height = 0;
+        // consensus.powLimit = uint256S("0x3fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 24 * 60 * 60;
-        consensus.nPowTargetSpacing = 60;
+        consensus.nPowTargetSpacing = 120;
         consensus.nZawyLwmaAveragingWindow = 90;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1368; // 95% of 1440
         consensus.nMinerConfirmationWindow = 1440; // nPowTargetTimespan / nPowTargetSpacing
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+        // consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+        // consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
-        // Deployment of BIP68, BIP112, and BIP113.
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        // // Deployment of BIP68, BIP112, and BIP113.
+        // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
-        // Deployment of SegWit (BIP141, BIP143, and BIP147)
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
+        // // Deployment of SegWit (BIP141, BIP143, and BIP147)
+        // consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE;
+        // consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00");
@@ -207,10 +207,10 @@ public:
         pchMessageStart[1] = 0xae;
         pchMessageStart[2] = 0xdc;
         pchMessageStart[3] = 0xfe;
-        nDefaultPort = 29706;
+        nDefaultPort = 4883;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1565128501, 339318, 0x1e3fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1565128501, 339318, 0x1e3fffff, 1, 85 * COIN);
 
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x00000153e335e7ec9802faeb525b5aa06c3c36443b40ee59530b4a711446500c"));
